@@ -9,7 +9,7 @@ class ConexaoMySQL:
         self.database = "endereco"
         self.port = 3306
         self.conexao = None
-        self.cursor = pymysql.cursos.DictCursor
+        self.cursor = pymysql.cursors.DictCursor
 
     def abrir(self):
         try:

@@ -19,10 +19,13 @@ class Estado:
                     conn.commit()
                     self.id = cursor.lastrowid
                     print("Salvo com sucesso!")
+                    return True
             except Exception as e:
                 print(f"Erro ao salvar estado: {e}")
+                return False
             finally:
                 self.db.fechar()
+
 
     def listar(self):
         conn = self.db.abrir()
